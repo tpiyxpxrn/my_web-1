@@ -8,7 +8,7 @@ def indexPage(request):
 
 
 def aboutUs(request):
-    return HttpResponse("เกี่ยวกับฉัน")_
+    return HttpResponse("เกี่ยวกับฉัน")
 
 
 def contact(request):
