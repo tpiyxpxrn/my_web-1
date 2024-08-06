@@ -56,7 +56,7 @@ ROOT_URLCONF = "my_web1.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [path.joinpath(BASE_DIR, 'templates')],
+        "DIRS": [Path.joinpath(BASE_DIR, 'templates')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
