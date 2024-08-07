@@ -13,3 +13,6 @@ def aboutUs(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+def forPage(request):
+    return render(request, 'for_test.thml')
