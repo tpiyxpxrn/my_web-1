@@ -20,3 +20,10 @@ def forPage(request):
     context["list"] = lt
 
     return render(request, 'for_test.html', context)
+
+def forGard(request):
+    context = {}
+    lt = list(range(0, 100))
+    context["list"] = lt
+
+    return render(request, 'gard.html', context)
