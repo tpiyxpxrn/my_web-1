@@ -15,4 +15,8 @@ def contact(request):
     return render(request, 'contact.html')
 
 def forPage(request):
-    return render(request, 'for_test.thml')
+    context = {}
+    lt = list(range(0, 100))
+    context["list"] = lt
+
+    return render(request, 'for_test.html', context)
