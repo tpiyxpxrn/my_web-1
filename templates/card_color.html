@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+<!---->
+{% block content %}
+<div>
+  <div class="container">
+    <h1>{{ color }}</h1>
+    <div class="row pt-4">
+      <div class="col text-center"><a href="?color=black" class="btn btn-dark">สีดำ</a></a></div>
+      <div class="col text-center"><a href="?color=light" class="btn btn-light">สีขาว</a></a></div>
+      <div class="col text-center"><a href="?color=grey" class="btn btn-secondary">สีเทา</a></a></div>
+    </div>
+    <div class="row">
+      {% if color == 'all' or color == 'black' %}
+        <div class="col pt-4">
+          <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+              <h5 class="card-title">Dark card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      <!---->
+      {% if color == 'all' or color == 'light' %}
+      <div class="col pt-4">
+        <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+          <div class="card-header">Header</div>
+          <div class="card-body">
+            <h5 class="card-title">Light card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      <!---->
+      {% if color == 'all' or color == 'grey' %}
+      <div class="col pt-4">
+        <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+          <div class="card-header">Header</div>
+          <div class="card-body">
+            <h5 class="card-title">Secondary card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      <div class="text-center">
+        <div class="col pt-1"><a href="?color=all" class="btn btn-primary">ทั้งหมด</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

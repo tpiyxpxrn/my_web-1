@@ -18,7 +18,6 @@ def forPage(request):
     context = {}
     lt = list(range(0, 100))
     context["list"] = lt
-
     return render(request, 'for_test.html', context)
 
 def forGard(request):
@@ -27,3 +26,11 @@ def forGard(request):
     context["list"] = lt
 
     return render(request, 'gard.html', context)
+
+def cardColorPage(request):
+    context = {
+        'color': 'all',
+    }
+    if request.method == "GET" and request.GET.get('color') != None:
+        context['color'] = request.GET['color']
+    return render(request, 'card_color.html', context)
