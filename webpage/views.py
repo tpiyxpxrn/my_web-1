@@ -34,3 +34,18 @@ def cardColorPage(request):
     if request.method == "GET" and request.GET.get('color') != None:
         context['color'] = request.GET['color']
     return render(request, 'card_color.html', context)
+
+def forFormSend(request):
+    email = ""
+    password = ""
+
+    context = {}
+
+    if request.method == "POST":
+        email = request.POST.get('email')
+        password = request.POST.get('my-password')
+
+    context['email'] = email
+    context['password'] = password
+
+    return render(request, 'sendform.html', context)

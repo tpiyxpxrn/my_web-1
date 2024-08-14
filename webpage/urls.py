@@ -9,5 +9,6 @@ urlpatterns = [
     path("for/", views.forPage, name="for-page"),
     path("gard/", views.forGard, name="gard"),
     path("color/", views.cardColorPage, name="color-page"),
+    path("form/", views.forFormSend, name="form"),
 
 ]
